@@ -25,3 +25,29 @@
     )
     rgb(var(--background-start-rgb));
 } */
+
+.waveform {
+  width: 100%;
+  min-height: 8rem;
+  padding: 0.5rem 0;
+}
+
+/* styles/global.css */
+/* Style the cursor part */
+#waveform ::part(cursor)::before {
+  content: '🏄';
+  /* Add your custom styles here */
+}
+
+/* Style the region part */
+#waveform ::part(region) {
+  font-family: fantasy;
+  color: red;
+  /* Add your custom styles here */
+}
+#waveform::part(wrapper) {
+  font-family: fantasy;
+  color: red;
+  max-width: 200px;
+  /* Add your custom styles here */
+}

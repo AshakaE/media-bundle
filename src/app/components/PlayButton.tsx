@@ -1,18 +1,23 @@
 import Image from 'next/image'
-import { ImPlay3 } from 'react-icons/im'
+import { GrPlayFill, GrPauseFill } from 'react-icons/gr'
 
-const PlayButton = ({
-    handleButtonPress,
-}: {
+interface PlayButtonProps {
+    play: boolean
     handleButtonPress: () => void
-}) => {
+}
+
+const PlayButton = ({ handleButtonPress, play }: PlayButtonProps) => {
     return (
         <button
             id='playButton'
             className='play-button basis-1/4'
             onClick={handleButtonPress}
         >
-            <ImPlay3 className='play-button-icon text-red-700 h-14 w-14 ' />
+            {play ? (
+                <GrPauseFill className='play-button-icon text-red-700 h-14 w-14 ' />
+            ) : (
+                <GrPlayFill className='play-button-icon text-red-700 h-14 w-14 ' />
+            )}
         </button>
     )
 }

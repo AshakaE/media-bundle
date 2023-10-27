@@ -1,0 +1,6 @@
+
+/* Style the cursor part */
+#waveform ::part(cursor)::before {
+  content: '🏄';
+  /* Add your custom styles here */
+}
